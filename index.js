@@ -22,3 +22,9 @@ loadIfc('./01.ifc');
 
 window.ondblclick = () => viewer.IFC.selector.pickIfcItem();
 window.onmousemove = () => viewer.IFC.selector.prePickIfcItem();
+
+window.onclick = async () => {
+  const found = await viewer.IFC.selector.pickIfcItem();
+  const result = await viewer.IFC.loader.ifcManager.getItemProperties(found.modelID, found.id);
+  console.log(result);
+}
