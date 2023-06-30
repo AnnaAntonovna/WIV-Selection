@@ -22,7 +22,7 @@ html, body {
 .ifc-property-menu {
     border: 1px solid gray;
     width: 20rem;
-    position: absolute;
+    position:relative;
     background-color: white;
 }
 
@@ -43,6 +43,7 @@ html, body {
     position: absolute;
     overflow-y: scroll;
     background-color: white;
+    min-width: 20rem;
     height: 100vh;
 }
 
